@@ -3,9 +3,7 @@
 var dom = document, count = 0, bubbleCount = 0, removed = 0;
 Repeater(); async function Repeater(){ await sleep(100); await Routine(); }
 async function Routine(){
-     var PurgedGroup = dom.getElementsByClassName("group2");
         var BubbleGroup = dom.getElementsByClassName("message-bubble message-bubble-message");
-        for (let i = 0; i < PurgedGroup.length; i++){ var parent = PurgedGroup[i].parentNode.parentNode; count ++; }
         for (let i = 0; i < BubbleGroup.length; i++){ var parent = BubbleGroup[i];
             if (parent.parentNode.parentNode.children[0].children[0].children[0].children[0] != null){
                 let str = parent.parentNode.parentNode.children[0].children[0].children[0].children[0].outerHTML; 
